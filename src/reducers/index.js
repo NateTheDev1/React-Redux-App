@@ -27,7 +27,7 @@ export const reducer = (state = initialState, action) => {
       return {
         ...state,
         fetching: false,
-        url: action.payload,
+        error: action.payload,
       };
     default:
       return state;
