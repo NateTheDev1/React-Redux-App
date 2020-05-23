@@ -8,6 +8,7 @@ const initialState = {
   fetching: false,
   url: "",
   error: "",
+  saved: [],
 };
 
 export const reducer = (state = initialState, action) => {
