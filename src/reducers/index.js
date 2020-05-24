@@ -2,6 +2,7 @@ import {
   FETCHING_URL,
   FETCH_URL_SUCCESS,
   FETCH_URL_FAILURE,
+  RESET_FORM,
 } from "../actions/actions";
 
 const initialState = {
@@ -17,12 +18,12 @@ export const reducer = (state = initialState, action) => {
       return {
         ...state,
         fetching: true,
+        error: "",
       };
     case FETCH_URL_SUCCESS:
       return {
         ...state,
         fetching: false,
-        url: "",
         url: action.payload,
       };
     case FETCH_URL_FAILURE:

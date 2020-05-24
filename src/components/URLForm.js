@@ -15,6 +15,7 @@ const useStyles = makeStyles(() => ({
   input: {
     background: "white",
     marginBottom: "2%",
+    fontFamily: "Roboto",
   },
   submit: {
     color: "#EF5B25",
@@ -123,6 +124,7 @@ const URLForm = ({ shortenURL, error, fetching, url }) => {
               InputProps={{ disableUnderline: true }}
               className={classes.input}
             />
+
             <Button variant="outlined" type="submit" className={classes.submit}>
               Shorten
             </Button>

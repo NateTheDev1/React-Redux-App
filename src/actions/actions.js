@@ -6,10 +6,12 @@ export const FETCH_URL_SUCCESS = "FETCH_URL_SUCCESS";
 export const FETCH_URL_FAILURE = "FETCH_URL_FAILURE";
 
 export const shortenURL = (userURL) => (dispatch) => {
+  console.log(userURL);
   dispatch({ type: FETCHING_URL });
   const urlToSend = userURL.includes("https://")
     ? userURL
     : "https://" + userURL;
+  console.log(urlToSend);
   axios
     .post(url, { url: urlToSend })
     .then((res) => {
