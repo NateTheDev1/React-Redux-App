@@ -14,13 +14,15 @@ export const shortenURL = (userURL) => (dispatch) => {
     .post(url, { url: urlToSend })
     .then((res) => {
       //expecting back result_url
-      console.log(res.data);
-      dispatch({ type: FETCH_URL_SUCCESS, payload: res.data.result_url });
+      setTimeout(() => {
+        console.log(res.data);
+        dispatch({ type: FETCH_URL_SUCCESS, payload: res.data.result_url });
+      }, 200);
     })
     .catch((err) => {
       console.log(err);
       dispatch({
-        type: FETCH_URL_SUCCESS,
+        type: FETCH_URL_FAILURE,
         payload: `Something Went Wrong With Your Request...`,
       });
     });

@@ -9,7 +9,7 @@ const useStyles = makeStyles(() => ({
     background: "#EF5B25",
     boxSizing: "border-box",
     padding: "1%",
-    height: "100px",
+    height: "125px",
   },
   toolbars: {
     display: "flex",
@@ -18,7 +18,7 @@ const useStyles = makeStyles(() => ({
   },
   textStyles: {
     flex: 1,
-    fontSize: "1.5rem",
+    fontSize: "2.5rem",
   },
   icon: {
     fontSize: "2.5rem",

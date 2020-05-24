@@ -22,12 +22,14 @@ export const reducer = (state = initialState, action) => {
       return {
         ...state,
         fetching: false,
+        url: "",
         url: action.payload,
       };
     case FETCH_URL_FAILURE:
       return {
         ...state,
         fetching: false,
+        url: "",
         error: action.payload,
       };
     default:
